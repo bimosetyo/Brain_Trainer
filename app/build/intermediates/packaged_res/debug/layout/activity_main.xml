@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#9370DB"
+    tools:context=".MainActivity">
+
+
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F4A460"
+        android:onClick="start"
+        android:padding="40dp"
+        android:text="Go!!!"
+        android:textColor="#2E8B57"
+        android:textSize="70sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MARI BERHITUNG"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/gameOn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="9dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/sumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="145dp"
+            android:padding="15dp"
+            android:text="68 + 1"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginBottom="96dp"
+            android:gravity="center"
+            android:textSize="50sp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sumTv"
+            android:layout_marginTop="100dp">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#FFA500"
+                    android:onClick="pilihJawaban"
+                    android:tag="0"
+                    android:text="3"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#00BFFF"
+                    android:onClick="pilihJawaban"
+                    android:tag="1"
+                    android:text="3"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#CD5C5C"
+                    android:onClick="pilihJawaban"
+                    android:tag="2"
+                    android:text="3"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="123dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#90EE90"
+                    android:onClick="pilihJawaban"
+                    android:tag="3"
+                    android:text="3"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1" />
+
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/timerTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="57dp"
+            android:background="#FFEB3B"
+            android:text="30s"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/pointsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="34dp"
+            android:background="#74FF5722"
+            android:padding="10dp"
+            android:text="0/0"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnMainLagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="606dp"
+            android:layout_marginBottom="39dp"
+            android:gravity="center"
+            android:onClick="mainLagi"
+            android:text="PLAY AGAIN" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
